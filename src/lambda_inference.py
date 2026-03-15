@@ -21,10 +21,10 @@ def lambda_handler(event, context):
     # Fallback to a mock high-risk event if payload is empty during local testing
     if not event:
         event = {
-            'cpu_usage': [92.0],
-            'cpu_rolling_mean_15m': [40.0],
-            'cpu_rolling_std_15m': [3.5],
-            'cpu_spike': [52.0]
+            'cpu_usage': [95.0],
+            'cpu_rolling_mean_15m': [20.0],
+            'cpu_rolling_std_15m': [30.0],
+            'cpu_spike': [80.0]
         }
 
     input_data = pd.DataFrame(event, columns=features)
